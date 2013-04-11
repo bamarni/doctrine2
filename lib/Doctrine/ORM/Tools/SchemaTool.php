@@ -232,7 +232,7 @@ class SchemaTool
 
             if (isset($class->table['indexes'])) {
                 foreach ($class->table['indexes'] as $indexName => $indexData) {
-                    $table->addIndex($indexData['columns'], is_numeric($indexName) ? null : $indexName);
+                    $table->addIndex($indexData['columns'], is_numeric($indexName) ? null : $indexName, $indexData['flags']);
                 }
             }
 
